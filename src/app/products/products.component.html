@@ -1,0 +1,42 @@
+
+<div class="d-flex align-items-center justify-content-center minH" *ngIf="loader">
+  <div class="p-2 bd-highlight col-example">
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      Loading...
+    </button>
+  </div>
+    
+</div>
+
+
+<div class="container minH">
+  
+  <div class="row gap" *ngIf="prodList">
+    
+    <div class="col-md-6 col-lg-4 col-sm-6 m-b30" *ngFor="let item of prodList">
+        <div class="thumbImg">
+          <a href="#">
+            <div class="thumb_img">
+              <img src="assets/product_img/{{item.image}}" alt="..." class="img-fluid">
+            </div>
+        
+            <h5 class="prodTitel">
+              {{item.name}}
+            </h5>
+         </a>
+            <p>{{item.detail}}</p>
+            <div class="thumb_price">
+              <span class="shop-thumb-price_old"><i class="fa fa-rupee"></i>{{item.mrp}}</span>
+              <span class="shop-thumb-price_new"><i class="fa fa-rupee"></i>{{item.price}}</span>
+            </div>
+            <button type="button" class="btn btn-outline-primary waves-effect" (click)="addtocart(item)"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+          
+        </div>
+    </div>
+ 
+      
+    
+</div>
+
+</div>

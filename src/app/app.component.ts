@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ApidataService} from 'src/app/services/apidata.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'synoption';
+  alertMsg=false;
+
+  constructor(public apiServices:ApidataService) { }
+
+  ngOnInit()
+  {
+   
+   this.apiServices.forAlertMsgSbj.subscribe(res=>{this.alertMsg = res});
+   
+   
+ }
+
 }
