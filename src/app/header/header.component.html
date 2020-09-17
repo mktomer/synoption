@@ -1,17 +1,25 @@
-<header class="header rs-nav header-transparent ">
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+<header class="header rs-nav header-transparent">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a href="#" class="navbar-brand">
             <img src="/assets/images/logo.png" height="35" alt="CoolBrand">
         </a>
        
-        
+        <button type="button" style="display: none;" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a  href="javascript://" [routerLink]="['/product']" class="nav-item nav-link active">Product List</a>
+               
+                
+            </div>
+            
+        </div>
 
         
-        
-        
-        <button type="button" class="btn btn-primary  float-right"  [routerLink]="['/cart']"><i class="fa fa-cart-plus mr-2"></i> My Cart</button>
+        <button type="button" class="btn btn-primary float-right"   [routerLink]="['/cart']"><i class="fa fa-cart-plus mr-2"></i> My Cart</button>
 
-       
         
     </nav>
 </header>
